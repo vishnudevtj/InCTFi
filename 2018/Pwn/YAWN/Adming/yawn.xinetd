@@ -1,0 +1,13 @@
+service yawn
+{
+        disable         = no
+	socket_type	= stream
+	protocol	= tcp
+	user		= root
+	wait		= no
+        type            = UNLISTED
+        bind            = 0.0.0.0
+        port            = 8888
+        server          = /home/yawn/run.sh
+        instances       = 50
+}
